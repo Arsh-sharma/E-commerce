@@ -1,16 +1,10 @@
 {
   "seller": [
     {
-      "id": "aae9",
-      "name": "Arsh Sharma",
-      "email": "arsh705s10@gmail.com",
-      "password": "abc@123"
-    },
-    {
-      "id": "e22e",
-      "name": "Monika Sharma",
+      "id": "d42b",
+      "name": "Arsh Sharma ",
       "password": "hello@123",
-      "email": "mpb1173@gmail.com"
+      "email": "arsh705s10@gmail.com"
     }
   ]
 }

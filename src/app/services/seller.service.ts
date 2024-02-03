@@ -25,7 +25,7 @@ export class SellerService {
         console.log(result);
       });
 
-    return false;
+    // return false;
   }
 
   reloadSeller() {

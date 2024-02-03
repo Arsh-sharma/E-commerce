@@ -6,5 +6,26 @@
       "password": "hello@123",
       "email": "arsh705s10@gmail.com"
     }
+  ],
+  "products": [
+    {},
+    {
+      "id": "85c1",
+      "name": "maggie",
+      "product-color": "yellow",
+      "product-category": "food",
+      "product-price": "50",
+      "product-description": "very tasty",
+      "product-img": "www.maggie.com"
+    },
+    {
+      "id": "8cca",
+      "name": "maggie",
+      "product-color": "yellow",
+      "product-category": "food",
+      "product-price": "50",
+      "product-description": "maggie",
+      "product-img": "www.maggie.com"
+    }
   ]
 }

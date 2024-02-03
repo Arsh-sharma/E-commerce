@@ -8,24 +8,23 @@
     }
   ],
   "products": [
-    {},
     {
       "id": "85c1",
       "name": "maggie",
-      "product-color": "yellow",
-      "product-category": "food",
-      "product-price": "50",
-      "product-description": "very tasty",
-      "product-img": "www.maggie.com"
+      "color": "yellow",
+      "category": "food",
+      "price": "50",
+      "description": "very tasty",
+      "image": "https://vegecravings.com/wp-content/uploads/2020/01/Vegetable-Masala-Maggi-Recipe-Step-By-Step-Instructions-scaled.jpg"
     },
     {
       "id": "8cca",
       "name": "maggie",
-      "product-color": "yellow",
-      "product-category": "food",
-      "product-price": "50",
-      "product-description": "maggie",
-      "product-img": "www.maggie.com"
+      "color": "yellow",
+      "category": "food",
+      "price": "50",
+      "description": "maggie",
+      "image": "https://vegecravings.com/wp-content/uploads/2020/01/Vegetable-Masala-Maggi-Recipe-Step-By-Step-Instructions-scaled.jpg"
     }
   ]
 }

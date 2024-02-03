@@ -3,13 +3,16 @@ import { Injectable } from '@angular/core';
 import { product } from '../data-type';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ProductService {
+  constructor(private http: HttpClient) {}
 
-  constructor(private http: HttpClient) { }
+  addProduct(data: product) {
+    return this.http.post('http://localhost:3000/products', data);
+  }
 
-  addProduct(data:product){
-    return this.http.post("http://localhost:3000/products",data)
+  getProduct() {
+    return this.http.get<product[]>('http://localhost:3000/products');
   }
 }

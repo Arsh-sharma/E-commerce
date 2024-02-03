@@ -17,19 +17,19 @@ export class HeaderComponent implements OnInit {
       // console.log(val.url)
 
       if (val.url) {
-        console.log(val.url);
+        // console.log(val.url);
         if (localStorage.getItem('seller') && val.url.includes('seller')) {
-          console.log('in-seller-area');
+          // console.log('in-seller-area');
           this.menuType = 'seller';
           if (localStorage.getItem('seller')) {
             let sellerStore = localStorage.getItem('seller');
-            console.log(sellerStore);
+            // console.log(sellerStore);
             let sellerData = sellerStore && JSON.parse(sellerStore);
             this.sellerName = sellerData.name;
           }
         } else {
           this.menuType = 'default';
-          console.log('out-seller-area');
+          // console.log('out-seller-area');
         }
       }
     });

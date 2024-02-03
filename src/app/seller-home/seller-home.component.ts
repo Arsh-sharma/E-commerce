@@ -9,6 +9,7 @@ import { product } from '../data-type';
 })
 export class SellerHomeComponent implements OnInit {
   ProductList: undefined | product[];
+  deleteMessage: string | undefined;
 
   constructor(private product: ProductService) {}
 
@@ -16,5 +17,21 @@ export class SellerHomeComponent implements OnInit {
     this.product.getProduct().subscribe((result) => {
       this.ProductList = result;
     });
+  }
+
+  deleteProduct(id: string) {
+    this.product.deleteProduct(id).subscribe((result) => {
+      if (result) {
+        this.deleteMessage = 'Product deleted sucessfully!';
+      }
+    });
+
+    this.product.getProduct().subscribe((result) => {
+      this.ProductList = result;
+    });
+
+    setTimeout(() => {
+      this.deleteMessage = undefined;
+    }, 3000);
   }
 }

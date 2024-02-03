@@ -1,4 +1,5 @@
 <div class="product-list">
+  <p class="p_message">{{ deleteMessage }}</p>
   <h1>Product List</h1>
   <table>
     <thead>
@@ -9,12 +10,13 @@
         <th>Category</th>
         <th>Color</th>
         <th>Description</th>
+        <th>Action</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let item of ProductList">
         <td>
-            <img src="{{ item.image}}" alt="{{item.name}}">
+          <img src="{{ item.image }}" alt="{{ item.name }}" />
         </td>
         <td>
           {{ item.name }}
@@ -30,6 +32,11 @@
         </td>
         <td>
           {{ item.description }}
+        </td>
+        <td>
+          <button class="form-button" (click)="deleteProduct(item.id)">
+            Delete
+          </button>
         </td>
       </tr>
     </tbody>

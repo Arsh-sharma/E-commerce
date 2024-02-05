@@ -11,6 +11,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { SellerHomeComponent } from './seller-home/seller-home.component';
 import { SellerAddProductComponent } from './seller-add-product/seller-add-product.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SellerProductUpdateComponent } from './seller-product-update/seller-product-update.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -20,8 +22,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     SellerAuthComponent,
     SellerHomeComponent,
     SellerAddProductComponent,
+    SellerProductUpdateComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, FontAwesomeModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, FontAwesomeModule, NgbModule],
   providers: [],
   bootstrap: [AppComponent],
 })

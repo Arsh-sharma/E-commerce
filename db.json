@@ -1,4 +1,14 @@
 {
   "seller": [],
-  "products": []
+  "products": [
+    {
+      "name": "Apples",
+      "color": "red and green",
+      "category": "food",
+      "price": "50/kg",
+      "description": "tasty",
+      "image": "https://tse1.mm.bing.net/th?id=OIP.q3hhyPUuKnHFQB-AtIaRgwHaFj&pid=Api&P=0&h=180",
+      "id": "9738"
+    }
+  ]
 }

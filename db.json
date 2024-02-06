@@ -1,5 +1,12 @@
 {
-  "seller": [],
+  "seller": [
+    {
+      "id": "8009",
+      "name": "Arsh Sharma",
+      "password": "123abc",
+      "email": "arsh705s10@gmail.com"
+    }
+  ],
   "products": [
     {
       "name": "Apples",
@@ -9,6 +16,69 @@
       "description": "tasty",
       "image": "https://tse1.mm.bing.net/th?id=OIP.q3hhyPUuKnHFQB-AtIaRgwHaFj&pid=Api&P=0&h=180",
       "id": "9738"
+    },
+    {
+      "id": "8dd9",
+      "name": "shoes",
+      "color": "pink",
+      "category": "Footwear",
+      "price": "4000",
+      "description": "Comfortable and Durable",
+      "image": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1546620177-skechers-go-run-6-womens-right-index-1526498937.jpg?crop=0.888888888888889xw:1xh;center,top"
+    },
+    {
+      "id": "0eb0",
+      "name": "IPhone",
+      "color": "All",
+      "category": "Technology",
+      "price": "50000",
+      "description": "Bring home the latest technology.",
+      "image": "https://allccessory.com/wp-content/uploads/2020/10/Apple-iPhone-11-64GB_4.jpg"
+    },
+    {
+      "id": "119f",
+      "name": "Dell Laptop",
+      "color": "Gray",
+      "category": "Technology",
+      "price": "45000",
+      "description": "It is all that you need to get started!",
+      "image": "http://store.hp.com/UKStore/Html/Merch/Images/c05512731_1750x1285.jpg"
+    },
+    {
+      "id": "df27",
+      "name": "Silk Dress",
+      "color": "Gray",
+      "category": "Clothing",
+      "price": "2000",
+      "description": "Soft and Comfy",
+      "image": "https://i5.walmartimages.com/asr/75093805-c42e-47f1-bcac-4ae0174d303e_1.93eebc72b5c8cb50c806409b9a5cd940.jpeg"
+    },
+    {
+      "id": "36b4",
+      "name": "Truck Toy",
+      "color": "Multicolor",
+      "category": "Entertainment",
+      "price": "200",
+      "description": "Fun and Safe",
+      "image": "https://i5.walmartimages.com/asr/3177ab30-07da-4793-b3da-7e23b95c00a4_1.d08a2d2fa09504e13dfd5618c90424ec.jpeg"
+    },
+    {
+      "id": "6d90",
+      "name": "Toy Car",
+      "color": "Red",
+      "category": "Entertainment",
+      "price": "3000",
+      "description": "Fun to ride!!",
+      "image": "https://image.made-in-china.com/2f0j00RmbTnGYIJocf/11671518-Remote-Car-Toys-for-Kids-12V-Rechargeable-Children-Toys-Car-Kids-Toys.jpg"
+    },
+    {
+      "id": "00f5",
+      "name": "Cotton Dress",
+      "color": "Black",
+      "category": "Clothing",
+      "price": "2000",
+      "description": "Trendy",
+      "image": "http://ohhmymy.com/wp-content/uploads/2016/09/Lovely-Plus-Size-Womens-Clothing-For-Summer.jpg"
     }
   ]
 }

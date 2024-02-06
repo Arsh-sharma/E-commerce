@@ -16,15 +16,36 @@ export class ProductService {
     return this.http.get<product[]>('http://localhost:3000/products');
   }
 
-  deleteProduct(id:string){
-    return this.http.delete(`http://localhost:3000/products/${id}`)
+  deleteProduct(id: string) {
+    return this.http.delete(`http://localhost:3000/products/${id}`);
   }
 
-  updateProduct(id:string){
+  updateProduct(id: string) {
     return this.http.get<product>(`http://localhost:3000/products/${id}`);
   }
 
-  updateProductFinal(product:product){
-    return this.http.put<product>(`http://localhost:3000/products/${product?.id}`,product);
+  getDetails(id: string) {
+    return this.http.get<product>(`http://localhost:3000/products/${id}`);
+  }
+
+  updateProductFinal(product: product) {
+    return this.http.put<product>(
+      `http://localhost:3000/products/${product?.id}`,
+      product
+    );
+  }
+
+  popularProducts() {
+    return this.http.get<product[]>('http://localhost:3000/products?_limit=3');
+  }
+
+  trendyProducts() {
+    return this.http.get<product[]>('http://localhost:3000/products');
+  }
+
+  searchProducts(query: string) {
+    return this.http.get<product[]>(
+      `http://localhost:3000/products?category=${query}`
+    );
   }
 }

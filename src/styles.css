@@ -31,6 +31,17 @@ body {
   cursor: pointer;
 }
 
-.p_message{
-    color: green;
+.p_message {
+  color: green;
+}
+
+.carousel-caption {
+  background-color: rgba(43, 40, 40, 0.728);
+  border-radius: 5px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black;
+  border-radius: 5px;
 }

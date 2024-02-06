@@ -6,6 +6,8 @@ import { SellerHomeComponent } from './seller-home/seller-home.component';
 import { sellerAuthGaurdGuard } from './seller-auth-gaurd.guard';
 import { SellerAddProductComponent } from './seller-add-product/seller-add-product.component';
 import { SellerProductUpdateComponent } from './seller-product-update/seller-product-update.component';
+import { SearchComponent } from './search/search.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 const routes: Routes = [
   {
@@ -30,6 +32,15 @@ const routes: Routes = [
     path: 'seller-product-update/:id',
     component: SellerProductUpdateComponent,
     canActivate: [sellerAuthGaurdGuard],
+  },
+  {
+    path: 'search/:query',
+    component: SearchComponent,
+  },
+
+  {
+    path: 'details/:productId',
+    component:ProductDetailsComponent,
   },
 ];
 

@@ -53,3 +53,23 @@ h1 a {
   color: blueviolet;
   text-decoration: none;
 }
+
+.suggested-results {
+  position: absolute;
+  display: list-item !important;
+  z-index: 10;
+  background-color: #fff;
+  width: 300px;
+  top: 40px;
+  border: 1px solid #ddd;
+}
+
+.suggested-reults li {
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+
+.suggested-reults li a {
+  cursor: pointer;
+  color: blueviolet;
+}

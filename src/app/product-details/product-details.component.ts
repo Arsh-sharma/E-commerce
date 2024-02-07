@@ -10,6 +10,7 @@ import { product } from '../data-type';
 })
 export class ProductDetailsComponent implements OnInit {
   productData: undefined | product;
+  productQty: number = 1;
 
   constructor(
     private activateRoute: ActivatedRoute,
@@ -23,5 +24,13 @@ export class ProductDetailsComponent implements OnInit {
       this.product.getDetails(productId).subscribe((result) => {
         this.productData = result;
       });
+  }
+
+  handleQuantity(val: string) {
+    if (this.productQty < 20 && val === 'plus') {
+      this.productQty += 1;
+    }else if (this.productQty > 1 && val === 'min') {
+      this.productQty -= 1;
+    }
   }
 }

@@ -10,7 +10,7 @@
   "products": [
     {
       "name": "Apples",
-      "color": "red and green",
+      "color": "red",
       "category": "food",
       "price": "50/kg",
       "description": "tasty",
@@ -29,7 +29,7 @@
     {
       "id": "0eb0",
       "name": "IPhone",
-      "color": "All",
+      "color": "red",
       "category": "Technology",
       "price": "50000",
       "description": "Bring home the latest technology.",
@@ -56,7 +56,7 @@
     {
       "id": "36b4",
       "name": "Truck Toy",
-      "color": "Multicolor",
+      "color": "yellow",
       "category": "Entertainment",
       "price": "200",
       "description": "Fun and Safe",

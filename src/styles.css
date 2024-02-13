@@ -31,6 +31,9 @@ body {
   cursor: pointer;
 }
 
+.e_message {
+  color: red;
+}
 .p_message {
   color: green;
 }
@@ -44,4 +47,14 @@ body {
 .carousel-control-next-icon {
   background-color: black;
   border-radius: 5px;
+}
+
+.invalid-input {
+  color: red;
+  font-size: 12px;
+  margin-top: -20px;
+}
+
+button:disabled {
+  cursor: not-allowed;
 }

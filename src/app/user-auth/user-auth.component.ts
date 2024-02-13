@@ -10,7 +10,7 @@ import { faL } from '@fortawesome/free-solid-svg-icons';
 })
 export class UserAuthComponent implements OnInit {
   showLogin: boolean = true;
-
+  authError: string = '';
   constructor(private user: UserService) {}
 
   ngOnInit(): void {
@@ -22,7 +22,12 @@ export class UserAuthComponent implements OnInit {
   }
 
   login(data: Login) {
-    this.user.userLogin(data)
+    this.user.userLogin(data);
+    this.user.invalidUserAuth.subscribe((res) => {
+      if (res) {
+        this.authError = "Enter Valid Credentials"
+      }
+    });
   }
 
   openSignUp() {

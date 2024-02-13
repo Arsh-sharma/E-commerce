@@ -15,6 +15,7 @@ export class HeaderComponent implements OnInit {
   sellerName: String = 'seller';
   searchResults: undefined | product[];
   userName: string = '';
+  cartQty: number = 0;
 
   ngOnInit(): void {
     this.router.events.subscribe((val: any) => {
@@ -41,6 +42,15 @@ export class HeaderComponent implements OnInit {
           // console.log('out-seller-area');
         }
       }
+    });
+
+    let cartData = localStorage.getItem('localCart');
+    if (cartData) {
+      this.cartQty = JSON.parse(cartData).length;
+    }
+
+    this.product.cartDataQty.subscribe((items) => {
+      this.cartQty = items.length;
     });
   }
 
@@ -80,9 +90,8 @@ export class HeaderComponent implements OnInit {
     this.router.navigate([`/details/${id}`]);
   }
 
-  userLogout(){
-
-      localStorage.removeItem('user');
-      this.router.navigate(['/user-auth']);
+  userLogout() {
+    localStorage.removeItem('user');
+    this.router.navigate(['/user-auth']);
   }
 }

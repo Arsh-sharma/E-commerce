@@ -81,5 +81,26 @@
       "image": "http://ohhmymy.com/wp-content/uploads/2016/09/Lovely-Plus-Size-Womens-Clothing-For-Summer.jpg"
     }
   ],
-  "Users": []
+  "Users": [
+    {
+      "id": "edaf",
+      "name": "Arsh Sharma",
+      "email": "arsh705s10@gmail.com",
+      "password": "abc123"
+    }
+  ],
+  "Cart": [
+    {
+      "id": "041b",
+      "name": "IPhone",
+      "color": "red",
+      "category": "Technology",
+      "price": "50000",
+      "description": "Bring home the latest technology.",
+      "image": "https://allccessory.com/wp-content/uploads/2020/10/Apple-iPhone-11-64GB_4.jpg",
+      "quantity": 1,
+      "userId": "edaf",
+      "productId": "0eb0"
+    }
+  ]
 }

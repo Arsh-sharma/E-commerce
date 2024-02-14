@@ -5,7 +5,7 @@
       "name": "Apples",
       "color": "red",
       "category": "food",
-      "price": "50/kg",
+      "price": "50",
       "description": "tasty",
       "image": "https://tse1.mm.bing.net/th?id=OIP.q3hhyPUuKnHFQB-AtIaRgwHaFj&pid=Api&P=0&h=180",
       "id": "9738"
@@ -84,15 +84,39 @@
   ],
   "Cart": [
     {
-      "id": "7a14",
+      "id": "41a2",
+      "name": "shoes",
+      "color": "pink",
+      "category": "Footwear",
+      "price": "4000",
+      "description": "Comfortable and Durable",
+      "image": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1546620177-skechers-go-run-6-womens-right-index-1526498937.jpg?crop=0.888888888888889xw:1xh;center,top",
+      "quantity": 1,
+      "userId": "78e7",
+      "productId": "8dd9"
+    },
+    {
+      "id": "20c3",
       "name": "Apples",
       "color": "red",
       "category": "food",
-      "price": "50/kg",
+      "price": "50",
       "description": "tasty",
       "image": "https://tse1.mm.bing.net/th?id=OIP.q3hhyPUuKnHFQB-AtIaRgwHaFj&pid=Api&P=0&h=180",
-      "quantity": 1,
+      "quantity": 4,
       "productId": "9738",
+      "userId": "78e7"
+    },
+    {
+      "id": "1060",
+      "name": "shoes",
+      "color": "pink",
+      "category": "Footwear",
+      "price": "4000",
+      "description": "Comfortable and Durable",
+      "image": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1546620177-skechers-go-run-6-womens-right-index-1526498937.jpg?crop=0.888888888888889xw:1xh;center,top",
+      "quantity": 1,
+      "productId": "8dd9",
       "userId": "78e7"
     }
   ]

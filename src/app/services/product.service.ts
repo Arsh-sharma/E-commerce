@@ -99,4 +99,12 @@ export class ProductService {
         }
       });
   }
+
+  currentCart() {
+    let userStore = localStorage.getItem('user');
+    let userData = userStore && JSON.parse(userStore);
+    return this.http.get<cart[]>(
+      'http://localhost:3000/Cart?userId=' + userData.id
+    );
+  }
 }

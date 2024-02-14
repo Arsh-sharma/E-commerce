@@ -34,12 +34,12 @@ export class CartPageComponent implements OnInit {
   loadDetails() {
     this.product.currentCart().subscribe((result) => {
       this.cartData = result;
-      console.warn(this.cartData);
+      // console.warn(this.cartData);
       let price = 0;
       result.forEach((item) => {
         if (item.quantity) {
           price = price + (+item.price) * (+item.quantity);
-          console.log(price)
+          // console.log(price)
         }
       });
       this.priceSummary.price = price;

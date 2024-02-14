@@ -37,6 +37,7 @@ export class HeaderComponent implements OnInit {
           let userData = userStore && JSON.parse(userStore);
           this.userName = userData.name;
           this.menuType = 'user';
+          this.product.getCartList(userData.id);
         } else {
           this.menuType = 'default';
           // console.log('out-seller-area');
@@ -50,6 +51,8 @@ export class HeaderComponent implements OnInit {
     }
 
     this.product.cartDataQty.subscribe((items) => {
+      // console.log('hello ji');
+      // console.log(items);
       this.cartQty = items.length;
     });
   }
@@ -93,5 +96,6 @@ export class HeaderComponent implements OnInit {
   userLogout() {
     localStorage.removeItem('user');
     this.router.navigate(['/user-auth']);
+    this.product.cartDataQty.emit([]);
   }
 }

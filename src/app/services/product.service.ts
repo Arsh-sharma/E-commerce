@@ -56,26 +56,47 @@ export class ProductService {
 
     if (!localCart) {
       localStorage.setItem('localCart', JSON.stringify([data]));
+      this.cartDataQty.emit([data]);
     } else {
       cartData = JSON.parse(localCart);
       cartData.push(data);
       localStorage.setItem('localCart', JSON.stringify(cartData));
+      this.cartDataQty.emit(cartData);
     }
-
-    this.cartDataQty.emit(cartData);
   }
 
   removeFromCart(productId: string) {
     let cartData = localStorage.getItem('localCart');
     if (cartData) {
+      // console.log('hi');
       let items: product[] = JSON.parse(cartData);
       items = items.filter((item: product) => productId != item.id);
       localStorage.setItem('localCart', JSON.stringify(items));
       this.cartDataQty.emit(items);
+    } else {
+      // console.log('hello');
     }
   }
 
-  addToCart(cartData:cart){
-    return this.http.post('http://localhost:3000/Cart',cartData)
+  removeLoginCart(cartId: string) {
+    return this.http.delete('http://localhost:3000/Cart/' + cartId);
+  }
+
+  addToCart(cartData: cart) {
+    return this.http.post('http://localhost:3000/Cart', cartData);
+  }
+
+  getCartList(userId: string) {
+    return this.http
+      .get<product[]>('http://localhost:3000/Cart?userId=' + userId, {
+        observe: 'response',
+      })
+      .subscribe((res) => {
+        // console.log(res);
+        if (res && res.body) {
+          this.cartDataQty.emit(res.body);
+          // console.log(res.body);
+        }
+      });
   }
 }

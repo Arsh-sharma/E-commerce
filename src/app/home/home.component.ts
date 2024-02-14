@@ -16,12 +16,12 @@ export class HomeComponent {
 
     this.product.popularProducts().subscribe((data)=>{
       this.popularProducts=data;
-      console.log(data)
+      // console.log(data)
     })
 
     this.product.trendyProducts().subscribe((data) => {
       this.trendyProducts = data;
-      console.log(data);
+      // console.log(data);
     });
   }
 }

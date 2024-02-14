@@ -1,12 +1,5 @@
 {
-  "seller": [
-    {
-      "id": "8009",
-      "name": "Arsh Sharma",
-      "password": "123abc",
-      "email": "arsh705s10@gmail.com"
-    }
-  ],
+  "seller": [],
   "products": [
     {
       "name": "Apples",
@@ -83,7 +76,7 @@
   ],
   "Users": [
     {
-      "id": "edaf",
+      "id": "78e7",
       "name": "Arsh Sharma",
       "email": "arsh705s10@gmail.com",
       "password": "abc123"
@@ -91,16 +84,16 @@
   ],
   "Cart": [
     {
-      "id": "041b",
-      "name": "IPhone",
+      "id": "7a14",
+      "name": "Apples",
       "color": "red",
-      "category": "Technology",
-      "price": "50000",
-      "description": "Bring home the latest technology.",
-      "image": "https://allccessory.com/wp-content/uploads/2020/10/Apple-iPhone-11-64GB_4.jpg",
+      "category": "food",
+      "price": "50/kg",
+      "description": "tasty",
+      "image": "https://tse1.mm.bing.net/th?id=OIP.q3hhyPUuKnHFQB-AtIaRgwHaFj&pid=Api&P=0&h=180",
       "quantity": 1,
-      "userId": "edaf",
-      "productId": "0eb0"
+      "productId": "9738",
+      "userId": "78e7"
     }
   ]
 }

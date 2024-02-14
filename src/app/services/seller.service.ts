@@ -22,7 +22,7 @@ export class SellerService {
         this.isSelleraloggedIn.next(true);
         localStorage.setItem('seller', JSON.stringify(result.body));
         this.router.navigate(['seller-home']);
-        console.log(result);
+        // console.log(result);
       });
 
     // return false;
@@ -36,7 +36,7 @@ export class SellerService {
   }
 
   userLogin(data: Login) {
-    console.log(data);
+    // console.log(data);
 
     this.http
       .get(
@@ -44,11 +44,11 @@ export class SellerService {
         { observe: 'response' }
       )
       .subscribe((result: any) => {
-        console.warn(result);
+        // console.warn(result);
         if (result && result.body && result.body.length) {
-          console.warn('user loggedin');
+          // console.warn('user loggedin');
         } else {
-          console.warn('fail');
+          // console.warn('fail');
           this.isLoginError.emit(true);
         }
       });

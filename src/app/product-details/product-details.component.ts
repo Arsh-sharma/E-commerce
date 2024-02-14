@@ -12,6 +12,7 @@ export class ProductDetailsComponent implements OnInit {
   productData: undefined | product;
   productQty: number = 1;
   removeCart: boolean = false;
+  cartData: product | undefined;
 
   constructor(
     private activateRoute: ActivatedRoute,
@@ -36,6 +37,25 @@ export class ProductDetailsComponent implements OnInit {
           }
         }
       });
+
+    let user = localStorage.getItem('user');
+    if (user) {
+      // console.log("hello");
+      let userId = user && JSON.parse(user).id;
+      this.product.getCartList(userId);
+      this.product.cartDataQty.subscribe((res) => {
+        let items = res.filter(
+          (item: product) =>
+            productId?.toString() === item.productId?.toString()
+        );
+
+        if (items.length) {
+          // console.log(items)
+          this.cartData = items[0];
+          this.removeCart = true;
+        }
+      });
+    }
   }
 
   handleQuantity(val: string) {
@@ -47,25 +67,55 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   addToCart() {
+    // console.log('there');
     if (this.productData) {
+      // console.log('there1');
       this.productData.quantity = this.productQty;
       if (!localStorage.getItem('user')) {
+        // console.log('there2');
+
         this.product.localAddToCart(this.productData);
         this.removeCart = true;
       } else {
+        // console.log('here');
         let user = localStorage.getItem('user');
         let userId = user && JSON.parse(user).id;
-        let cartData:cart = { ...this.productData, userId,productId:this.productData.id}
-        delete cartData.id
+        let cartData: cart = {
+          ...this.productData,
+          userId,
+          productId: this.productData.id,
+        };
+        delete cartData.id;
 
-        this.product.addToCart(cartData).subscribe(()=>{})
+        this.product.addToCart(cartData).subscribe((res) => {
+          if (res) {
+            // console.log('hi');
+            // console.log(res);
+            this.product.getCartList(userId);
+            // console.log(data);
+            // console.log('hiiiiiiiii');
+            this.removeCart = true;
+          }
+        });
       }
-     
     }
   }
 
   removeToCart(productId: string) {
-    this.product.removeFromCart(productId);
-    this.removeCart = false;
+    // console.log('Hiiiiiiiiiiiiiiiiiiiiiii');
+    if (!localStorage.getItem('user')) {
+      this.product.removeFromCart(productId);
+      this.removeCart = false;
+    } else {
+      this.removeCart = false;
+      let user = localStorage.getItem('user');
+      let userId = user && JSON.parse(user).id;
+      this.cartData &&
+        this.product.removeLoginCart(this.cartData.id).subscribe((res) => {
+          if (res) {
+            this.product.getCartList(userId);
+          }
+        });
+    }
   }
 }

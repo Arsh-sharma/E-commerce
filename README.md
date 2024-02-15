@@ -25,3 +25,8 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+##Frontend in Angular and bootsrap --->run (ng serve) ---> on PORT 4200
+##Backend in JSON SERVER ---> run (json-server db.json) ---> on PORT 3000
+(REFER TO GITHUB REPO OF JSON SERVER FOR MORE DETAILS)
